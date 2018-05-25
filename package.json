@@ -1,0 +1,30 @@
+{
+  "name": "daily-mootivation",
+  "version": "1.0.0",
+  "description": "Simple web app that utilizes AWS lambda and SNS to send users insperational quotes first thing in the morning.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itolu94/JobSearch.git"
+  },
+  "author": "Tolu Idowu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/itolu94/JobSearch/issues"
+  },
+  "homepage": "https://github.com/itolu94/JobSearch#readme",
+  "dependencies": {
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.3.13",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "webpack": "^1.13.1"
+  }
+}
