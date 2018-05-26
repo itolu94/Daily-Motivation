@@ -7,7 +7,7 @@ export default class Header extends Component {
     }
     render(){
         return(
-            <nav>
+            <nav id='header'>
                 <div className="nav-wrapper">
                     <a href="#" className="brand-logo center">Daily-Motivation</a>
                 </div>

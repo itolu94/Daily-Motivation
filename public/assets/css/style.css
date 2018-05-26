@@ -15,34 +15,50 @@ main {
     flex: 1 0 auto;
 }
 
-/*=================Header.jsx=====================*/
-.nav-wrapper{
-    background-color: powderblue;
+#app{
+    height: 100vh;
 }
 
+/*=================Header.jsx=====================*/
 .brand-logo {
     color: black !important;
+}
+
+#header{
+    padding:10px;
+}
+
+.nav-wrapper, nav{
+    background-color: powderblue;
 }
 
 /*===============================================*/
 
 
+#content{
+    min-height:100%;
+    position:relative;
+}
 
-/*=================Registration.jsx=====================*/
+    /*=================Registration.jsx=====================*/
+::placeholder{
+    color: black;
+}
+
 #registration-header{
     font-size: 1.92rem;
-
+    margin:0;
+    padding:0;
+    height:100%;
 }
 
 #registration-div{
     background-color: powderblue;
     color: black;
     margin-top: 10%;
+    padding: 10px 0;
 }
 
-::placeholder{
-    color: black;
-}
 /*======================================================*/
 
 
@@ -50,12 +66,36 @@ main {
 /*=================Footer.jsx=====================*/
 
 #footer{
-    position: fixed;
-    bottom: 0;
     background-color: powderblue;
     text-align: center;
     width: 100%;
     padding: 20px 0;
+    position:absolute;
+    bottom:0;
+    height:60px;   /* Height of the footer */
 }
 
 /*================================================*/
+
+
+
+
+@media only screen and (max-width:1000px){
+    #registration-header{
+        font-size: 1.5rem;
+    }
+
+}
+
+@media only screen and (max-width:700px){
+    #registration-div{
+        margin-top: 17%;
+    }
+}
+
+@media only screen and (max-width:600px){
+    nav .brand-logo{
+        font-size: 1.75rem;
+    }
+
+}
