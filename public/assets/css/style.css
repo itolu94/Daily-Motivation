@@ -3,9 +3,59 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    background-image: url('../images/Wallpapers 1920x1080.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /*TODO rename to match outer most div for content*/
 main {
     flex: 1 0 auto;
 }
+
+/*=================Header.jsx=====================*/
+.nav-wrapper{
+    background-color: powderblue;
+}
+
+.brand-logo {
+    color: black !important;
+}
+
+/*===============================================*/
+
+
+
+/*=================Registration.jsx=====================*/
+#registration-header{
+    font-size: 1.92rem;
+
+}
+
+#registration-div{
+    background-color: powderblue;
+    color: black;
+    margin-top: 10%;
+}
+
+::placeholder{
+    color: black;
+}
+/*======================================================*/
+
+
+
+/*=================Footer.jsx=====================*/
+
+#footer{
+    position: fixed;
+    bottom: 0;
+    background-color: powderblue;
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
+/*================================================*/

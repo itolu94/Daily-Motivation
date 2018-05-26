@@ -1,16 +1,19 @@
 import React, {Component} from 'react';
+import Header from './Content/Header.jsx';
+import Registration from './Content/Registration.jsx'
+import Footer from './Content/Footer.jsx';
 
-
-class Layout extends Component {
+export default class Layout extends Component {
     constructor(){
         super();
     }
     render(){
         return(
             <div>
-                <h1>Hello World</h1>
+                <Header/>
+                <Registration/>
+                <Footer/>
             </div>
         )
     }
 }
-export default Layout;
