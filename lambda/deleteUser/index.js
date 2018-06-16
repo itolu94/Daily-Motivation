@@ -1,5 +1,3 @@
-
-
 exports.handler =  (event, handler, callback) => {
     // require dependencies
     let mysql = require('mysql');
@@ -19,27 +17,29 @@ exports.handler =  (event, handler, callback) => {
     });
     //template for response
     let response = {
+        headers: {
+            "Access-Control-Allow-Origin": '*'
+        },
         isBase64Encoded: false,
         statusCode: 200,
         body: {},
     };
-
     try {
         //establish database connection
         connection.connect();
-        // console.log(event);
-        let {phoneNumber, email}= event.body;
+        console.log(`event is = ${JSON.stringify(event)}`);
+        let  {email} = event.queryStringParameters;
+        let phoneNumber = event.queryStringParameters["phone-number"];
         let sql =  "SELECT user_id, subscribtion_arn FROM User WHERE  phone_number=? AND email =?";
         // query database to find  user_id;
         connection.query(sql, [phoneNumber, email], (err, results, fields) => {
-            console.log("checking if user excist= " + JSON.stringify(results));
             if(err) {
                 connection.end();
                 response.body = JSON.stringify(err);
                 response.statusCode = 500;
                 callback(null, response);
             }
-            else if(results.length > 0){ // if account is found, delete it.
+            else if(results.length > 0){ //user's account was found
                 let sql = "DELETE FROM User WHERE user_id =?";
                 let user_id = results[0]["user_id"];
                 let SubscriptionArn = results[0]["subscribtion_arn"];
@@ -61,7 +61,7 @@ exports.handler =  (event, handler, callback) => {
                             callback(null, response);
                         }
                         connection.end();
-                        // console.log("Account was deleted");
+                        console.log("Account was deleted");
                         response.body = "Account was deleted";
                         callback(null, response);
                     });
@@ -69,7 +69,7 @@ exports.handler =  (event, handler, callback) => {
             }
             else { //account was not found
                 connection.end();
-                // console.log("Account does not excise");
+                console.log("Account does not excise");
                 response.statusCode = 404;
                 response.body = "Please confirm email and phone number used for your account";
                 callback(null, response);
