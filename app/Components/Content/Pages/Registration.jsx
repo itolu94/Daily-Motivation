@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import API from '../../Utility/API.jsx';
+import API from '../../../Utility/API.jsx';
 
 export default class Registration extends Component {
     constructor(){
@@ -29,7 +29,7 @@ export default class Registration extends Component {
     render(){
         return(
             <div id='registration-div' className="container">
-                <div className="row login">
+                <div className="row pages-div">
                     <div className="col m8 offset-m2 center-align">
                         <h3 id='registration-header'> Sign up to receive free motivational quotes to start your day</h3>
                         <form onSubmit={this.handleSubmit}>
@@ -54,7 +54,7 @@ export default class Registration extends Component {
                                 type='text'
                                 name='phoneNumber'
                                 placeholder='Phone Number'
-                                value={this.props.phoneNumber}
+                                value={this.state.phoneNumber}
                                 onChange={this.handleChange}
                                 required
                             />

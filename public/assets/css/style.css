@@ -79,6 +79,23 @@ main {
 
 
 
+/*=================DeleteAccount.jsx=====================*/
+
+#delete-account-header{
+    font-size: 1.92rem;
+    margin:0;
+    padding:0;
+    height:100%;
+}
+
+#delete-account-div{
+    background-color: powderblue;
+    color: black;
+    margin-top: 10%;
+    padding: 10px 0;
+}
+
+/*================================================*/
 
 @media only screen and (max-width:1000px){
     #registration-header{

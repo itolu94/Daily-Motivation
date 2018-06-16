@@ -8,9 +8,10 @@ export default class DeleteAccount extends Component {
             email: '',
             phoneNumber: '',
         };
-        this.deleteAccount = this.deleteAccount.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleChange = this.handleChange.bind(this);
     }
-    deleteAccount(e){
+    handleSubmit(e){
         e.preventDefault();
         let {email, phoneNumber} = this.state;
         if(email && phoneNumber){
@@ -26,7 +27,7 @@ export default class DeleteAccount extends Component {
     render(){
         return(
             <div id='delete-account-div' className="container">
-                <div className="row login">
+                <div className="row pages-div">
                     <div className="col m8 offset-m2 center-align">
                         <h3 id='delete-account-header'>To delete your account, please enter your email address and phone number</h3>
                         <form onSubmit={this.handleSubmit}>
@@ -42,7 +43,7 @@ export default class DeleteAccount extends Component {
                                 type='text'
                                 name='phoneNumber'
                                 placeholder='Phone Number'
-                                value={this.props.phoneNumber}
+                                value={this.state.phoneNumber}
                                 onChange={this.handleChange}
                                 required
                             />
