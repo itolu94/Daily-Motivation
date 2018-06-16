@@ -7,6 +7,7 @@ export default class DeleteAccount extends Component {
         this.state = {
             email: '',
             phoneNumber: '',
+            response: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
@@ -14,12 +15,11 @@ export default class DeleteAccount extends Component {
     handleSubmit(e){
         e.preventDefault();
         let {email, phoneNumber} = this.state;
-        if(email && phoneNumber){
-            let data = {email, phoneNumber};
-            API.deleteAccount(data, (response) =>{
-              console.log(respone);
-            })
-        }
+        let data = {email, phoneNumber};
+        API.deleteAccount(data, (response) =>{
+            if(response.status === 200 || response.status === 404) this.setState({response: response.data});
+            else this.setState({response: "Oops.. something went wrong.  Please try again later"});
+        })
     }
     handleChange(e){
             this.setState({[e.target.name]: e.target.value});
@@ -30,6 +30,7 @@ export default class DeleteAccount extends Component {
                 <div className="row pages-div">
                     <div className="col m8 offset-m2 center-align">
                         <h3 id='delete-account-header'>To delete your account, please enter your email address and phone number</h3>
+                        <p>{this.state.response}</p>
                         <form onSubmit={this.handleSubmit}>
                             <input
                                 type='text'

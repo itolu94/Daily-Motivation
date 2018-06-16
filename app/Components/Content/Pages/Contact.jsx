@@ -4,22 +4,27 @@ import API from '../../../Utility/API.jsx';
 
 export default class Contact extends Component {
     constructor(){
-        super()
+        super();
         this.state ={
             email: '',
-            message: ''
-        }
+            message: '',
+            response: '',
+            option: "Select One",
+        };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
     }
     handleSubmit(e){
         e.preventDefault();
-        let {email, message} = this.state;
-        if(email && message){
-            let data = {email, message};
+        let {email, message, option} = this.state;
+        if(option !== "Select One"){
+            let data = {email, message, option};
             API.contact(data, (response) =>{
-                console.log(respone);
-            })
+                if(response.status=== 200) this.setState({response: response.data});
+                else this.setState({response: "Oops.. something went wrong.  Please try again later"});
+            });
+        } else {
+            this.setState({response: "Please select an option"});
         }
     }
     handleChange(e){
@@ -31,6 +36,7 @@ export default class Contact extends Component {
                 <div className="row pages-div">
                     <div className="col m8 offset-m2 center-align">
                         <h3 id='delete-account-header'>Please enter your email and message.</h3>
+                        <p>{this.state.response}</p>
                         <form onSubmit={this.handleSubmit}>
                             <input
                                 type='text'
@@ -40,10 +46,18 @@ export default class Contact extends Component {
                                 onChange={this.handleChange}
                                 required
                             />
+                            <select name="option" value={this.state.option} onChange={this.handleChange}>
+                                <option value="Select One">Select One</option>
+                                <option value="New Quote">New Quote</option>
+                                <option value="Registration Error">Registration Error</option>
+                                <option value="Delete Account">Delete Account</option>
+                                <option value="Other">Other</option>
+                            </select>
                             <textarea
                                 name='message'
                                 row="10"
                                 columns="30"
+                                maxLength="200"
                                 placeholder='Enter your message'
                                 value={this.state.message}
                                 onChange={this.handleChange}

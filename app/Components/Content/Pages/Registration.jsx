@@ -10,6 +10,7 @@ export default class Registration extends Component {
             userName: '',
             email: '',
             phoneNumber: '',
+            response: ''
         }
     }
 
@@ -17,9 +18,11 @@ export default class Registration extends Component {
         e.preventDefault();
         let {userName, email, phoneNumber} = this.state;
         let newUser = {userName, email, phoneNumber};
-        API.createAccount(newUser, (resp)=>{
-            console.log(resp);
-        })
+        API.createAccount(newUser, (response)=>{
+                console.log(response);
+                if(response.status === 200 || response.status === 409) this.setState({response: response.data});
+                else this.setState({response: "Oops.. something went wrong.  Please try again later"});
+        });
     }
 
     handleChange(e){
@@ -32,6 +35,7 @@ export default class Registration extends Component {
                 <div className="row pages-div">
                     <div className="col m8 offset-m2 center-align">
                         <h3 id='registration-header'> Sign up to receive free motivational quotes to start your day</h3>
+                        <p>{this.state.response}</p>
                         <form onSubmit={this.handleSubmit}>
                             <input
                                 type="text"
