@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import API from '../../Utility/API.jsx';
 
 export default class Registration extends Component {
     constructor(){
@@ -7,7 +7,7 @@ export default class Registration extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.state = {
-            firstName: '',
+            userName: '',
             email: '',
             phoneNumber: '',
         }
@@ -15,6 +15,11 @@ export default class Registration extends Component {
 
     handleSubmit(e){
         e.preventDefault();
+        let {userName, email, phoneNumber} = this.state;
+        let newUser = {userName, email, phoneNumber};
+        API.createAccount(newUser, (resp)=>{
+            console.log(resp);
+        })
     }
 
     handleChange(e){
@@ -30,9 +35,9 @@ export default class Registration extends Component {
                         <form onSubmit={this.handleSubmit}>
                             <input
                                 type="text"
-                                name="firstName"
+                                name="userName"
                                 placeholder='First Name'
-                                value={this.state.firstName}
+                                value={this.state.userName}
                                 onChange={this.handleChange}
                                 required
 
