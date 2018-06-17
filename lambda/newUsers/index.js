@@ -36,7 +36,7 @@ exports.handler =  (event, handler, callback) => {
         console.log(`userName = ${userName}, phoneNumber = ${phoneNumber}, email=${email}`);
         // query database to determine if user already exist
         let sql =  "SELECT email, phone_number FROM User WHERE email=? or phone_number=?;";
-        connection.query(sql, [email, phoneNumber], (err, results, fields) => {
+        connection.query(sql, [email, phoneNumber], (err, results) => {
             console.log("checking if user eexcise " + JSON.stringify(results));
             if(err) {
                 connection.end();
@@ -71,7 +71,7 @@ exports.handler =  (event, handler, callback) => {
                         console.log("SNS.subscribe =  " + JSON.stringify(data));
                         console.log("User was added to SNS topic");
                         let subscribtionARN = data.SubscriptionArn;
-                        connection.query(sql, [userName, phoneNumber, email, subscribtionARN], (err,results,fields) => {
+                        connection.query(sql, [userName, phoneNumber, email, subscribtionARN], (err) => {
                             if(err) {
                                 connection.end();
                                 response.body = JSON.stringify(err);

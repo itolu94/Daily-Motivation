@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component 1`] = `
+<div
+  className="container"
+  id="delete-account-div"
+>
+  <div
+    className="row pages-div"
+  >
+    <div
+      className="col m8 offset-m2 center-align"
+    >
+      <h3
+        id="delete-account-header"
+      >
+        To delete your account, please enter your email address and phone number
+      </h3>
+      <p />
+      <form
+        onSubmit={[Function]}
+      >
+        <input
+          name="email"
+          onChange={[Function]}
+          placeholder="Email Address"
+          required={true}
+          type="text"
+          value=""
+        />
+        <input
+          name="phoneNumber"
+          onChange={[Function]}
+          placeholder="Phone Number"
+          required={true}
+          type="text"
+          value=""
+        />
+        <input
+          className=""
+          type="submit"
+        />
+      </form>
+    </div>
+  </div>
+</div>
+`;

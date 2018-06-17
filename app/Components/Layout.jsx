@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import Header from './Content/Header.jsx';
-import Registration from './Content/Pages/Registration.jsx';
-import DeleteAccount from './Content/Pages/DeleteAccount.jsx';
-import Contact from './Content/Pages/Contact.jsx';
+import Registration from './Content/Pages/Registration/Registration.jsx';
+import DeleteAccount from './Content/Pages/DeleteAccount/DeleteAccount.jsx';
+import Contact from './Content/Pages/Contact/Contact.jsx';
 import Footer from './Content/Footer.jsx';
 
 export default class Layout extends Component {
@@ -26,7 +26,7 @@ export default class Layout extends Component {
             case "contact":
                 return <Contact/>
             default:
-                return <Registration/>
+                return <Registration />
         }
     }
     render(){

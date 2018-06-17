@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import API from '../../../Utility/API.jsx';
+import API from '../../../../Utility/API.jsx';
 
 export default class Registration extends Component {
     constructor(){
@@ -63,7 +63,7 @@ export default class Registration extends Component {
                                 required
                             />
 
-                            <input className='' type="submit"/>
+                            <input className='registration-submit' type="submit"/>
                         </form>
                     </div>
                 </div>
