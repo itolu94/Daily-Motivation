@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import API from '../../../../Utility/API.jsx';
+import {RegistrationDiv, RegistrationHeader} from "./Registration.style.jsx";
 
 export default class Registration extends Component {
     constructor(){
@@ -31,10 +32,10 @@ export default class Registration extends Component {
 
     render(){
         return(
-            <div id='registration-div' className="container">
+            <RegistrationDiv className="container">
                 <div className="row pages-div">
                     <div className="col m8 offset-m2 center-align">
-                        <h3 id='registration-header'> Sign up to receive free motivational quotes to start your day</h3>
+                        <RegistrationHeader > Sign up to receive free motivational quotes to start your day</RegistrationHeader>
                         <p>{this.state.response}</p>
                         <form onSubmit={this.handleSubmit}>
                             <input
@@ -62,12 +63,11 @@ export default class Registration extends Component {
                                 onChange={this.handleChange}
                                 required
                             />
-
                             <input className='registration-submit' type="submit"/>
                         </form>
                     </div>
                 </div>
-            </div>
+            </RegistrationDiv>
         )
     }
 }

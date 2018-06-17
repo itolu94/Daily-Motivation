@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import API from '../../../../Utility/API.jsx';
-
+import {ContactDiv, ContactHeader} from './Contact.style.jsx';
 
 export default class Contact extends Component {
     constructor(){
@@ -32,10 +32,10 @@ export default class Contact extends Component {
     }
     render(){
         return(
-            <div id='delete-account-div' className="container">
+            <ContactDiv className="container">
                 <div className="row pages-div">
                     <div className="col m8 offset-m2 center-align">
-                        <h3 id='delete-account-header'>Please enter your email and message.</h3>
+                        <ContactHeader id='delete-account-header'>Please enter your email and message.</ContactHeader>
                         <p>{this.state.response}</p>
                         <form onSubmit={this.handleSubmit}>
                             <input
@@ -67,7 +67,7 @@ export default class Contact extends Component {
                         </form>
                     </div>
                 </div>
-            </div>
+            </ContactDiv>
         )
     }
 }
