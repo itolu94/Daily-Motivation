@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Registration component 1`] = `
+<div
+  className="container"
+  id="registration-div"
+>
+  <div
+    className="row pages-div"
+  >
+    <div
+      className="col m8 offset-m2 center-align"
+    >
+      <h3
+        id="registration-header"
+      >
+         Sign up to receive free motivational quotes to start your day
+      </h3>
+      <p />
+      <form
+        onSubmit={[Function]}
+      >
+        <input
+          name="userName"
+          onChange={[Function]}
+          placeholder="First Name"
+          required={true}
+          type="text"
+          value=""
+        />
+        <input
+          name="email"
+          onChange={[Function]}
+          placeholder="Email Address"
+          required={true}
+          type="text"
+          value=""
+        />
+        <input
+          name="phoneNumber"
+          onChange={[Function]}
+          placeholder="Phone Number"
+          required={true}
+          type="text"
+          value=""
+        />
+        <input
+          className="registration-submit"
+          type="submit"
+        />
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Registration component 2`] = `
+<div
+  className="container"
+  id="registration-div"
+>
+  <div
+    className="row pages-div"
+  >
+    <div
+      className="col m8 offset-m2 center-align"
+    >
+      <h3
+        id="registration-header"
+      >
+         Sign up to receive free motivational quotes to start your day
+      </h3>
+      <p />
+      <form
+        onSubmit={[Function]}
+      >
+        <input
+          name="userName"
+          onChange={[Function]}
+          placeholder="First Name"
+          required={true}
+          type="text"
+          value="itoodud"
+        />
+        <input
+          name="email"
+          onChange={[Function]}
+          placeholder="Email Address"
+          required={true}
+          type="text"
+          value="djdsj@mail.com"
+        />
+        <input
+          name="phoneNumber"
+          onChange={[Function]}
+          placeholder="Phone Number"
+          required={true}
+          type="text"
+          value="9999999999"
+        />
+        <input
+          className="registration-submit"
+          type="submit"
+        />
+      </form>
+    </div>
+  </div>
+</div>
+`;

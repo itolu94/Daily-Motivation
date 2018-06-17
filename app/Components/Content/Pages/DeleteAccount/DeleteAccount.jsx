@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import API from '../../../Utility/API.jsx';
+import API from '../../../../Utility/API.jsx';
 
 export default class DeleteAccount extends Component {
     constructor(){

@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component 1`] = `
+<div
+  className="container"
+  id="delete-account-div"
+>
+  <div
+    className="row pages-div"
+  >
+    <div
+      className="col m8 offset-m2 center-align"
+    >
+      <h3
+        id="delete-account-header"
+      >
+        Please enter your email and message.
+      </h3>
+      <p />
+      <form
+        onSubmit={[Function]}
+      >
+        <input
+          name="email"
+          onChange={[Function]}
+          placeholder="Email Address"
+          required={true}
+          type="text"
+          value=""
+        />
+        <select
+          name="option"
+          onChange={[Function]}
+          value="Select One"
+        >
+          <option
+            value="Select One"
+          >
+            Select One
+          </option>
+          <option
+            value="New Quote"
+          >
+            New Quote
+          </option>
+          <option
+            value="Registration Error"
+          >
+            Registration Error
+          </option>
+          <option
+            value="Delete Account"
+          >
+            Delete Account
+          </option>
+          <option
+            value="Other"
+          >
+            Other
+          </option>
+        </select>
+        <textarea
+          columns="30"
+          maxLength="200"
+          name="message"
+          onChange={[Function]}
+          placeholder="Enter your message"
+          required={true}
+          row="10"
+          value=""
+        />
+        <input
+          className=""
+          type="submit"
+        />
+      </form>
+    </div>
+  </div>
+</div>
+`;
