@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import API from '../../../../Utility/API.jsx';
+import {DeleteAccountHeader, DeleteAccountDiv} from './DeleteAccount.style.jsx';
 
 export default class DeleteAccount extends Component {
     constructor(){
@@ -26,10 +27,10 @@ export default class DeleteAccount extends Component {
     }
     render(){
         return(
-            <div id='delete-account-div' className="container">
+            <DeleteAccountDiv className="container">
                 <div className="row pages-div">
                     <div className="col m8 offset-m2 center-align">
-                        <h3 id='delete-account-header'>To delete your account, please enter your email address and phone number</h3>
+                        <DeleteAccountHeader id='delete-account-header'>To delete your account, please enter your email address and phone number</DeleteAccountHeader>
                         <p>{this.state.response}</p>
                         <form onSubmit={this.handleSubmit}>
                             <input
@@ -52,7 +53,7 @@ export default class DeleteAccount extends Component {
                         </form>
                     </div>
                 </div>
-            </div>
+            </DeleteAccountDiv>
         );
     }
 }

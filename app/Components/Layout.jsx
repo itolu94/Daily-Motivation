@@ -4,6 +4,7 @@ import Registration from './Content/Pages/Registration/Registration.jsx';
 import DeleteAccount from './Content/Pages/DeleteAccount/DeleteAccount.jsx';
 import Contact from './Content/Pages/Contact/Contact.jsx';
 import Footer from './Content/Footer.jsx';
+import {LayoutDiv} from "./Layout.style.jsx";
 
 export default class Layout extends Component {
     constructor(){
@@ -31,11 +32,11 @@ export default class Layout extends Component {
     }
     render(){
         return(
-            <div id='content' >
+            <LayoutDiv>
                 <Header changePage={this.changePage} />
                 {this.renderPage()}
                 <Footer/>
-            </div>
+            </LayoutDiv>
         )
     }
 }

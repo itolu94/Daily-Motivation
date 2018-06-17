@@ -23,6 +23,10 @@ select[name="option"]{
     display: inline;
 }
 
+::placeholder{
+    color: black;
+}
+
 /*=================Header.jsx=====================*/
 .brand-logo {
     color: black !important;
@@ -38,68 +42,6 @@ select[name="option"]{
 
 /*===============================================*/
 
-
-#content{
-    min-height:100%;
-    position:relative;
-}
-
-    /*=================Registration.jsx=====================*/
-::placeholder{
-    color: black;
-}
-
-#registration-header{
-    font-size: 1.92rem;
-    margin:0;
-    padding:0;
-    height:100%;
-}
-
-#registration-div{
-    background-color: powderblue;
-    color: black;
-    margin-top: 10%;
-    padding: 10px 0;
-}
-
-/*======================================================*/
-
-
-
-/*=================Footer.jsx=====================*/
-
-#footer{
-    background-color: powderblue;
-    text-align: center;
-    width: 100%;
-    padding: 20px 0;
-    position:absolute;
-    bottom:0;
-    height:60px;   /* Height of the footer */
-}
-
-/*================================================*/
-
-
-
-/*=================DeleteAccount.jsx=====================*/
-
-#delete-account-header{
-    font-size: 1.92rem;
-    margin:0;
-    padding:0;
-    height:100%;
-}
-
-#delete-account-div{
-    background-color: powderblue;
-    color: black;
-    margin-top: 10%;
-    padding: 10px 0;
-}
-
-/*================================================*/
 
 @media only screen and (max-width:1000px){
     #registration-header{

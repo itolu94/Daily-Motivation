@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-
+import {FooterDiv} from "./Footer.style.jsx";
 
 const Footer = () => {
         return(
-            <div id='footer'>
+            <FooterDiv>
                 &copy; 2018 Tolu Idowu
-            </div>
+            </FooterDiv>
         );
-}
+};
 
 export default Footer;
