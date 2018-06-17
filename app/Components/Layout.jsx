@@ -26,7 +26,7 @@ export default class Layout extends Component {
             case "contact":
                 return <Contact/>
             default:
-                return <Registration/>
+                return <Registration />
         }
     }
     render(){
