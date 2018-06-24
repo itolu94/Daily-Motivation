@@ -21,6 +21,7 @@ main {
 
 select[name="option"]{
     display: inline;
+    margin-bottom: 3%;
 }
 
 ::placeholder{
@@ -31,10 +32,6 @@ select[name="option"]{
 .brand-logo {
     color: black !important;
 }
-
-/*#header{*/
-    /*padding:10px;*/
-/*}*/
 
 .nav-wrapper, nav{
     background-color: powderblue;
@@ -47,6 +44,7 @@ select[name="option"]{
     #registration-header{
         font-size: 1.5rem;
     }
+
 
 }
 

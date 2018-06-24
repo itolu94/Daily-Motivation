@@ -1,9 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Registration component 1`] = `
-<div
+<styled.div
   className="container"
-  id="registration-div"
 >
   <div
     className="row pages-div"
@@ -11,11 +10,9 @@ exports[`Registration component 1`] = `
     <div
       className="col m8 offset-m2 center-align"
     >
-      <h3
-        id="registration-header"
-      >
+      <styled.h1>
          Sign up to receive free motivational quotes to start your day
-      </h3>
+      </styled.h1>
       <p />
       <form
         onSubmit={[Function]}
@@ -51,13 +48,12 @@ exports[`Registration component 1`] = `
       </form>
     </div>
   </div>
-</div>
+</styled.div>
 `;
 
 exports[`Registration component 2`] = `
-<div
+<styled.div
   className="container"
-  id="registration-div"
 >
   <div
     className="row pages-div"
@@ -65,11 +61,9 @@ exports[`Registration component 2`] = `
     <div
       className="col m8 offset-m2 center-align"
     >
-      <h3
-        id="registration-header"
-      >
+      <styled.h1>
          Sign up to receive free motivational quotes to start your day
-      </h3>
+      </styled.h1>
       <p />
       <form
         onSubmit={[Function]}
@@ -105,5 +99,5 @@ exports[`Registration component 2`] = `
       </form>
     </div>
   </div>
-</div>
+</styled.div>
 `;

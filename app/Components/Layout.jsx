@@ -16,9 +16,9 @@ export default class Layout extends Component {
     }
 
     changePage(e){
-        console.log(e.target);
         this.setState({page: e.target.name});
     }
+
     renderPage(){
         switch(this.state.page){
             case "registration":

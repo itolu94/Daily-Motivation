@@ -1,49 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Layout component 1`] = `
-<div
-  id="content"
->
+<styled.div>
   <Header
     changePage={[Function]}
   />
   <Registration />
   <Footer />
-</div>
+</styled.div>
 `;
 
 exports[`Layout component 2`] = `
-<div
-  id="content"
->
+<styled.div>
   <Header
     changePage={[Function]}
   />
   <Registration />
   <Footer />
-</div>
+</styled.div>
 `;
 
 exports[`Layout component 3`] = `
-<div
-  id="content"
->
+<styled.div>
   <Header
     changePage={[Function]}
   />
   <DeleteAccount />
   <Footer />
-</div>
+</styled.div>
 `;
 
 exports[`Layout component 4`] = `
-<div
-  id="content"
->
+<styled.div>
   <Header
     changePage={[Function]}
   />
   <Contact />
   <Footer />
-</div>
+</styled.div>
 `;

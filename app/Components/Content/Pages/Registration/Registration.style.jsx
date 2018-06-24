@@ -5,6 +5,8 @@ const RegistrationDiv = styled.div`
     color: black;
     margin-top: 10%;
     padding: 10px 0;
+    border-radius: 15px;
+    border: 5px white solid
 `;
 
 const RegistrationHeader = styled.h1`

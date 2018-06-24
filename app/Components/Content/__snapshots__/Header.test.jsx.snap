@@ -1,47 +1,94 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header component 1`] = `
-<nav
-  id="header"
->
-  <div
-    className="nav-wrapper"
+<div>
+  <nav
+    id="header"
   >
-    <a
-      className="brand-logo center"
-      href="#"
+    <div
+      className="nav-wrapper"
     >
-      Daily-Motivation
-    </a>
-    <ul
-      className="left hide-on-med-and-down"
-      id="nav-mobile"
-    >
-      <li>
-        <a
-          href="#"
-          name="registration"
+      <a
+        className="brand-logo center"
+        href="#"
+      >
+        Daily-Motivation
+      </a>
+      <ul
+        className="left hide-on-med-and-down"
+        id="nav-mobile"
+      >
+        <li>
+          <a
+            href="#"
+            name="registration"
+          >
+            Registration
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            name="delete-account"
+          >
+            Delete Account
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            name="contact"
+          >
+            Contact
+          </a>
+        </li>
+      </ul>
+      <ul
+        className="sidenav"
+        id="mobile-demo"
+      >
+        <Dropdown
+          id="mobile-demo"
+          trigger={
+            <a
+              className="sidenav-trigger"
+              href="#"
+            >
+              <i
+                className="material-icons"
+              >
+                menu
+              </i>
+            </a>
+          }
         >
-          Registration
-        </a>
-      </li>
-      <li>
-        <a
-          href="#"
-          name="delete-account"
-        >
-          Delete Account
-        </a>
-      </li>
-      <li>
-        <a
-          href="#"
-          name="contact"
-        >
-          Contact
-        </a>
-      </li>
-    </ul>
-  </div>
-</nav>
+          <li>
+            <a
+              href="#"
+              name="registration"
+            >
+              Registration
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              name="delete-account"
+            >
+              Delete Account
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              name="contact"
+            >
+              Contact
+            </a>
+          </li>
+        </Dropdown>
+      </ul>
+    </div>
+  </nav>
+</div>
 `;

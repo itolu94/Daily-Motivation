@@ -1,9 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header component 1`] = `
-<div
+<styled.div
   className="container"
-  id="delete-account-div"
 >
   <div
     className="row pages-div"
@@ -11,11 +10,11 @@ exports[`Header component 1`] = `
     <div
       className="col m8 offset-m2 center-align"
     >
-      <h3
+      <styled.h3
         id="delete-account-header"
       >
         To delete your account, please enter your email address and phone number
-      </h3>
+      </styled.h3>
       <p />
       <form
         onSubmit={[Function]}
@@ -43,5 +42,5 @@ exports[`Header component 1`] = `
       </form>
     </div>
   </div>
-</div>
+</styled.div>
 `;
