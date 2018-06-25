@@ -57,6 +57,9 @@ typings/
 # dotenv environment variables file
 .env
 
+#
+index.html
+
 #IntelliJ IDEA
 .idea/
 *.iml

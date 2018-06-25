@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Header from './Content/Pages/Contact/Header.jsx';
+import Header from './Content/Header.jsx';
 import Registration from './Content/Pages/Registration/Registration.jsx';
 import DeleteAccount from './Content/Pages/DeleteAccount/DeleteAccount.jsx';
 import Contact from './Content/Pages/Contact/Contact.jsx';

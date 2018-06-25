@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme'
-import Header from './Pages/Contact/Header.jsx';
+import Header from './Header.jsx';
 
 
 test("Header component", () => {
