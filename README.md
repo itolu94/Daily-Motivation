@@ -1,6 +1,6 @@
 # Daily-Motivation
  
- ##Description
+ ## Description
  I've recently read a lot of self help books and from time to time I come across a quote that I fall in love with. In an attempt to not forget these quotes, I stored them in a MySQL database and created an application that sends one of these quotes out via SMS every day.   
  
  Some of these quotes include:
